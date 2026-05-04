@@ -1,0 +1,58 @@
+:root {
+  --sidebar-bg: #1B4332;
+  --sidebar-active: #2D6A4F;
+  --sidebar-text: rgba(255,255,255,0.75);
+  --sidebar-text-active: #ffffff;
+  --sidebar-width: 235px;
+
+  --primary: #1B4332;
+  --primary-mid: #2D6A4F;
+  --primary-btn: #1B4332;
+  --primary-btn-hover: #163828;
+  --primary-light: #d1fae5;
+
+  --topbar-bg: #ffffff;
+  --page-bg: #f4f6f5;
+  --card-bg: #ffffff;
+  --border: #e5e7eb;
+  --border-radius: 12px;
+
+  --text-main: #111827;
+  --text-muted: #6b7280;
+  --text-light: #9ca3af;
+
+  --success-bg: #d1fae5;
+  --success-text: #065f46;
+  --danger-bg: #fee2e2;
+  --danger-text: #991b1b;
+
+  /* stat icon circle colors */
+  --stat-green-bg: #d1fae5;   --stat-green-icon: #059669;
+  --stat-purple-bg: #ede9fe;  --stat-purple-icon: #7c3aed;
+  --stat-blue-bg: #dbeafe;    --stat-blue-icon: #2563eb;
+  --stat-orange-bg: #ffedd5;  --stat-orange-icon: #ea580c;
+  --stat-teal-bg: #ccfbf1;    --stat-teal-icon: #0d9488;
+
+  /* timetable cell colors */
+  --cell-green: #bbf7d0;   --cell-green-text: #065f46;
+  --cell-purple: #ddd6fe;  --cell-purple-text: #5b21b6;
+  --cell-orange: #fed7aa;  --cell-orange-text: #9a3412;
+  --cell-blue: #bfdbfe;    --cell-blue-text: #1e40af;
+  --cell-teal: #99f6e4;    --cell-teal-text: #134e4a;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  background: var(--page-bg);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: 'Consolas', 'Courier New', monospace;
+}

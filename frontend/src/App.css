@@ -1,0 +1,321 @@
+/* =====================================================================
+   APP SHELL — sidebar + body layout
+   ===================================================================== */
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+.app-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: var(--sidebar-width);
+  min-width: 0;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  background: var(--page-bg);
+}
+
+/* =====================================================================
+   PAGE LAYOUT UTILITIES
+   ===================================================================== */
+.page-container {
+  max-width: 1100px;
+}
+
+.page-header {
+  margin-bottom: 1.75rem;
+}
+
+.page-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.page-subtitle {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.section-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 1rem;
+}
+
+/* =====================================================================
+   CARD
+   ===================================================================== */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* =====================================================================
+   BUTTONS
+   ===================================================================== */
+.btn-primary {
+  background: var(--primary-btn);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-family: inherit;
+}
+.btn-primary:hover:not(:disabled) { background: var(--primary-btn-hover); }
+.btn-primary:disabled { opacity: 0.65; cursor: wait; }
+
+.btn-outline {
+  background: white;
+  color: var(--primary);
+  border: 1px solid var(--border);
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-family: inherit;
+}
+.btn-outline:hover:not(:disabled) { background: var(--primary-light); border-color: var(--primary-mid); color: var(--primary-mid); }
+
+.btn-danger {
+  background: transparent;
+  color: #991b1b;
+  border: 1px solid #fca5a5;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+}
+.btn-danger:hover:not(:disabled) { background: var(--danger-bg); }
+.btn-danger:disabled { opacity: 0.65; cursor: wait; }
+
+/* =====================================================================
+   FORMS
+   ===================================================================== */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 1rem;
+}
+.form-group label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  background: white;
+  color: var(--text-main);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary-mid);
+  box-shadow: 0 0 0 3px rgba(27, 67, 50, 0.1);
+}
+
+/* =====================================================================
+   TABLES (global)
+   ===================================================================== */
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th {
+  background: #f8fafc;
+  padding: 10px 14px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+}
+td { padding: 12px 14px; border-bottom: 1px solid var(--border); color: var(--text-main); }
+tr:hover td { background: #fafafa; }
+tbody tr:last-child td { border-bottom: none; }
+
+/* =====================================================================
+   ALERTS (used by Allocation page — legacy classes preserved)
+   ===================================================================== */
+.alert {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+.alert-success { background: var(--success-bg); color: var(--success-text); }
+.alert-error   { background: var(--danger-bg);  color: var(--danger-text); }
+
+.status-panel {
+  background: var(--page-bg);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  font-size: 14px;
+}
+
+/* =====================================================================
+   ALLOCATION PAGE LEGACY STYLES (keep working without changes)
+   ===================================================================== */
+.page-shell {
+  width: min(100%, 1080px);
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  gap: 24px;
+}
+
+.page-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  padding: 32px;
+}
+
+.hero-card h1, .card-heading h1, .content-card h1 {
+  margin: 8px 0 12px;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--text-main);
+}
+
+.eyebrow {
+  font-size: 0.82rem; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--primary-mid);
+}
+
+.hero-text, .subtitle, .section-copy {
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+.subtitle { margin-bottom: 24px; }
+.section-copy { margin-bottom: 16px; }
+
+.action-row { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 14px; }
+
+.primary-link-button, .secondary-link-button, .submit-button, .secondary-danger-button {
+  display: inline-flex; align-items: center; justify-content: center;
+  text-decoration: none; border-radius: 8px; padding: 10px 18px;
+  font-size: 14px; font-weight: 600;
+  transition: background 0.15s; cursor: pointer; font-family: inherit;
+}
+.primary-link-button, .submit-button {
+  border: none; background: var(--primary-btn); color: #fff;
+}
+.primary-link-button:hover, .submit-button:hover:not(:disabled) {
+  background: var(--primary-btn-hover);
+}
+.secondary-link-button {
+  border: 1px solid var(--border); background: white; color: var(--text-main);
+}
+.secondary-link-button:hover { background: var(--primary-light); }
+.secondary-danger-button {
+  margin-top: 18px; border: 1px solid #fca5a5;
+  background: #fff5f5; color: #991b1b;
+}
+.secondary-danger-button:hover:not(:disabled) { background: var(--danger-bg); }
+.submit-button:disabled, .secondary-danger-button:disabled { opacity: 0.7; cursor: wait; }
+
+.info-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.info-tile {
+  padding: 20px; border-radius: var(--border-radius);
+  background: var(--page-bg); border: 1px solid var(--border);
+}
+.info-tile h2, .content-card h2, .schedule-header h2 {
+  margin: 0 0 10px; color: var(--text-main); font-size: 1.05rem;
+}
+.info-tile p, .schedule-header p { margin: 0; color: var(--text-muted); line-height: 1.6; }
+
+.allocation-card { width: min(100%, 820px); margin: 0 auto; }
+.allocation-form { display: grid; gap: 16px; margin-bottom: 28px; }
+.field { display: grid; gap: 6px; }
+.field span { font-weight: 500; font-size: 13px; color: var(--text-muted); }
+.field select {
+  width: 100%; padding: 10px 14px; font-size: 14px;
+  border: 1px solid var(--border); border-radius: 8px;
+  background: white; color: var(--text-main);
+  transition: border-color 0.15s, box-shadow 0.15s; font-family: inherit;
+}
+.field select:focus {
+  outline: none; border-color: var(--primary-mid);
+  box-shadow: 0 0 0 3px rgba(27, 67, 50, 0.1);
+}
+
+.schedule-section { border-top: 1px solid var(--border); padding-top: 24px; }
+.schedule-header p { margin-bottom: 16px; }
+.schedule-table-wrap {
+  overflow-x: auto; border: 1px solid var(--border);
+  border-radius: var(--border-radius); background: white;
+}
+.schedule-table { width: 100%; border-collapse: collapse; min-width: 600px; }
+.schedule-table th, .schedule-table td { padding: 11px 14px; text-align: left; border-bottom: 1px solid var(--border); }
+.schedule-table th { background: #f8fafc; font-size: 13px; font-weight: 500; color: var(--text-muted); }
+.schedule-table tbody tr:last-child td { border-bottom: none; }
+.schedule-table tbody tr:hover td { background: #fafafa; }
+.empty-state { text-align: center; color: var(--text-muted); padding: 2rem !important; }
+
+/* =====================================================================
+   RESPONSIVE
+   ===================================================================== */
+@media (max-width: 840px) { .info-grid { grid-template-columns: 1fr; } }
+@media (max-width: 640px) {
+  .page-card { padding: 20px 16px; }
+  .action-row { flex-direction: column; }
+  .app-body { margin-left: 0; }
+}
+
+/* =====================================================================
+   PRINT — hide app shell so only page content prints
+   ===================================================================== */
+@media print {
+  .sidebar,
+  .topbar,
+  .footer { display: none !important; }
+
+  /* Remove sidebar offset so content starts at the left edge */
+  .app-body { margin-left: 0 !important; }
+
+  /* Remove extra padding so the timetable card fills the page */
+  .main-content { padding: 0 !important; }
+}

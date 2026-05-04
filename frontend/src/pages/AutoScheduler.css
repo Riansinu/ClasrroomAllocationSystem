@@ -1,0 +1,157 @@
+.as-form-card {
+  margin-bottom: 1.5rem;
+}
+
+.as-form {
+  display: grid;
+  gap: 0;
+}
+
+/* Result section */
+.as-result-section {
+  margin-top: 0.5rem;
+}
+
+/* Best card */
+.as-best-card {
+  margin-bottom: 1rem;
+}
+
+.as-best-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.as-trophy {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.as-best-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+}
+
+.as-best-room {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.2;
+}
+
+.as-best-sub {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* Metrics row */
+.as-metrics {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.as-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.as-metric-val {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.as-metric-lbl {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.as-free {
+  color: var(--success-text);
+}
+
+/* Score bar */
+.as-score-row {
+  margin-bottom: 1.25rem;
+}
+
+.as-score-row span {
+  font-size: 13px;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.as-score-row strong {
+  color: var(--primary);
+}
+
+.as-score-bar {
+  height: 8px;
+  background: var(--border);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.as-score-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary) 0%, #7c9ef7 100%);
+  border-radius: 99px;
+  transition: width 0.6s ease;
+}
+
+/* Allocate button */
+.as-allocate-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+}
+
+/* Alternatives */
+.as-alternatives {
+  margin-top: 0.25rem;
+  font-size: 13px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.as-alt-label {
+  font-weight: 500;
+}
+
+.as-alt-chip {
+  background: var(--primary-light);
+  color: var(--primary);
+  border-radius: 99px;
+  padding: 3px 12px;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+/* No result state */
+.as-no-result {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  color: var(--text-muted);
+}
+
+.as-no-icon {
+  font-size: 2rem;
+}
